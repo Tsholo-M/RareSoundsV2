@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Vintage Instruments Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .category {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .category p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Select a Category</h1>
+    </header>
+    <main>
+        <div class="category" onclick="goToCategory('pianos')">
+            <img src="pianos/piano1.jpg" alt="Pianos">
+            <p>Pianos</p>
+        </div>
+        <div class="category" onclick="goToCategory('wind')">
+            <img src="instruments/trumpet.jpg" alt="Wind Instruments">
+            <p>Wind Instruments</p>
+        </div>
+        <div class="category" onclick="goToCategory('strings')">
+            <img src="instruments/violin2.jpg" alt="String Instruments">
+            <p>String Instruments</p>
+        </div>
+        <div class="category" onclick="goToCategory('percussion')">
+            <img src="instruments/percussion.jpg" alt="Percussion Instruments">
+            <p>Percussion Instruments</p>
+        </div>
+    </main>
+    <script>
+        function goToCategory(category) {
+            window.location.href = 'instruments.html?category=' + category;
+        }
+    </script>
+</body>
+</html>

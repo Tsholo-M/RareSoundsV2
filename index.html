@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Sounds | Vintage Instruments Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        #shopNowBtn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #shopNowBtn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Rare Sounds</h1>
+    </header>
+    <main>
+        <p>Discover a curated collection of rare and vintage musical instruments.</p>
+        <button id="shopNowBtn">Shop Now</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rare Sounds. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('shopNowBtn').onclick = function() {
+            window.location.href = 'categories.html';
+        };
+    </script>
+</body>
+</html>
